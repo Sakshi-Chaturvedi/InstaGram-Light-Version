@@ -19,6 +19,6 @@ app.use(
   }),
 );
 
-app.use("/auth", route);
+app.use("/api/auth", route);
 
 module.exports = app;
