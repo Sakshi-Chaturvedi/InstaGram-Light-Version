@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const route = require("./routes/auth.route");
 const { errorMiddleware } = require("./middlewares/error");
+const postRoute = require("./routes/posts.route");
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.use(
 );
 
 app.use("/api/auth", route);
+app.use("/api/posts", postRoute);
 
 module.exports = app;
