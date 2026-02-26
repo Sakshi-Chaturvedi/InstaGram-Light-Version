@@ -14,13 +14,13 @@ const postSchema = new mongoose.Schema(
 
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "SocialMediaUser",
       required: true,
     },
   },
   { timestamps: true },
 );
 
-const Post = mongoose.model("Post", postSchema);
+const Post = mongoose.model("posts", postSchema);
 
 module.exports = Post;
